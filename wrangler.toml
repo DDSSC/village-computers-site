@@ -1,0 +1,12 @@
+name = "contact-form"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+
+# Non-secret variables (set secrets separately with `wrangler secret put`)
+[vars]
+TO_EMAIL = "you@villagecomputersmtp.com"
+FROM_EMAIL = "contact@villagecomputersmtp.com"
+ALLOWED_ORIGIN = "https://villagecomputersmtp.com"
+
+# RESEND_API_KEY must be set as a secret:
+#   wrangler secret put RESEND_API_KEY

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Village Computers — Mount Pleasant, SC</title>
+<meta name="description" content="Get in touch with Village Computers in Mount Pleasant, SC. Call, visit, or send us a message — we respond fast.">
+<meta property="og:title" content="Contact Village Computers | Mount Pleasant, SC">
+<meta property="og:description" content="Reach out for computer repair, data recovery, malware removal, and IT support in the Greater Charleston area.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ── Page-specific styles ── */
+  .page-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0A2D6B 100%);
+    color: #fff;
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+  .page-hero h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    margin-bottom: 12px;
+  }
+  .page-hero p {
+    color: #C9DAF8;
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .contact-page {
+    padding: 64px 0 80px;
+  }
+
+  .contact-page-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  /* ── Info column ── */
+  .contact-page-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+  }
+
+  .contact-method {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .contact-method-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-method-body h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: var(--color-text);
+  }
+
+  .contact-method-body p,
+  .contact-method-body a {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .contact-method-body a {
+    color: var(--color-accent);
+    display: block;
+  }
+  .contact-method-body a:hover { color: var(--color-primary); }
+
+  .contact-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 32px 0;
+  }
+
+  .contact-social h3 {
+    font-size: 1rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--color-text);
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    padding: 10px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .social-link:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-primary);
+  }
+  .social-link-icon {
+    font-size: 1rem;
+  }
+
+  /* ── Form column ── */
+  .contact-page-form-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 36px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-page-form-wrap h2 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  .contact-page-form-wrap > p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .contact-form-page {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .contact-form-page label {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 14px;
+  }
+  .contact-form-page label:first-of-type { margin-top: 0; }
+
+  .contact-form-page input,
+  .contact-form-page textarea,
+  .contact-form-page select {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    resize: vertical;
+    width: 100%;
+  }
+  .contact-form-page input:focus,
+  .contact-form-page textarea:focus,
+  .contact-form-page select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(46, 134, 222, 0.15);
+    background: #fff;
+  }
+
+  .contact-form-page select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235B6472' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  .contact-form-page .btn {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-status-page {
+    font-size: 0.9rem;
+    margin-top: 12px;
+    min-height: 1.2em;
+    text-align: center;
+  }
+  .form-status-page.success { color: var(--color-success); }
+  .form-status-page.error   { color: #DC2626; }
+
+  /* ── Hours / map strip ── */
+  .info-strip {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 48px 0;
+    margin-top: 0;
+  }
+
+  .info-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+
+  .info-strip-item h3 {
+    font-size: 0.8rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #9DC4FF;
+    margin-bottom: 10px;
+  }
+
+  .info-strip-item p,
+  .info-strip-item a {
+    font-size: 0.95rem;
+    color: #E4ECFC;
+    line-height: 1.7;
+  }
+  .info-strip-item a { color: #AFC8F0; }
+  .info-strip-item a:hover { color: #fff; }
+
+  /* ── Responsive ── */
+  @media (max-width: 820px) {
+    .contact-page-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .info-strip-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .contact-page-form-wrap {
+      padding: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      Village Computers
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Computer Repair <span class="chev">▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="data-recovery.html">Data Recovery</a>
+          <a href="laptop-repair.html">Laptop Repair</a>
+          <a href="desktop-repair.html">Desktop Repair</a>
+          <a href="virus-removal.html">Virus Removal</a>
+          <a href="remote-support.html">Remote Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">On-Site Services <span class="chev">▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="residential.html">Residential</a>
+          <a href="business.html">Business</a>
+        </div>
+      </div>
+      <a href="support.html">Support Portal</a>
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html" class="active">Contact</a>
+    </nav>
+
+    <a href="tel:8436086560" class="header-cta">(843) 608-6560</a>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p>Whether it's a quick question or a full repair, we're here and we respond fast.</p>
+  </div>
+</section>
+
+<!-- ============ INFO STRIP ============ -->
+<section class="info-strip">
+  <div class="container info-strip-grid">
+    <div class="info-strip-item">
+      <h3>Phone</h3>
+      <p><a href="tel:8436086560">(843) 608-6560</a></p>
+    </div>
+    <div class="info-strip-item">
+      <h3>Location</h3>
+      <p>Warrick Lane, Mount Pleasant, SC<br>Off Ben Sawyer Blvd &mdash; across from Harris Teeter &amp; Goodwill</p>
+    </div>
+    <div class="info-strip-item">
+      <h3>Hours</h3>
+      <p>Mon &ndash; Fri: 9am &ndash; 6pm<br>Sat: 10am &ndash; 4pm<br>Sun: Closed</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT MAIN ============ -->
+<section class="contact-page">
+  <div class="container contact-page-inner">
+
+    <!-- Info column -->
+    <div class="contact-page-info">
+      <h2>Ways to reach us</h2>
+
+      <div class="contact-method">
+        <div class="contact-method-icon" aria-hidden="true">📞</div>
+        <div class="contact-method-body">
+          <h3>Call or Text</h3>
+          <a href="tel:8436086560">(843) 608-6560</a>
+          <p>Fastest way to get a same-day response.</p>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-method-icon" aria-hidden="true">📍</div>
+        <div class="contact-method-body">
+          <h3>Visit Us</h3>
+          <a href="https://maps.google.com/?q=Village+Computers+Mount+Pleasant+SC" target="_blank" rel="noopener">Get directions →</a>
+          <p>Warrick Lane, Mount Pleasant, SC<br>Off Ben Sawyer Blvd, across from Harris Teeter &amp; Goodwill.</p>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-method-icon" aria-hidden="true">💻</div>
+        <div class="contact-method-body">
+          <h3>Remote Support</h3>
+          <a href="https://sos.splashtop.com/" target="_blank" rel="noopener">Start Remote Session →</a>
+          <p>We can connect to your computer and help right now.</p>
+        </div>
+      </div>
+
+      <hr class="contact-divider">
+
+      <div class="contact-social">
+        <h3>Find us online</h3>
+        <div class="social-links">
+          <a href="https://www.google.com/search?q=Village+Computers+Mount+Pleasant+SC" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">⭐</span> Review us on Google
+          </a>
+          <a href="http://www.facebook.com/cyndrtec" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">👍</span> Like us on Facebook
+          </a>
+          <a href="http://blog.cyndrtec.com" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link-icon">📝</span> Read our Blog
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form column -->
+    <div class="contact-page-form-wrap">
+      <h2>Send us a message</h2>
+      <p>Fill out the form below and we'll get back to you as soon as possible &mdash; usually the same day.</p>
+
+      <form class="contact-form-page" id="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="(843) 555-0100">
+
+        <label for="service">What do you need help with?</label>
+        <select id="service" name="service">
+          <option value="" disabled selected>Select a service...</option>
+          <option value="data-recovery">Data Recovery</option>
+          <option value="malware-removal">Malware / Virus Removal</option>
+          <option value="laptop-repair">Laptop Repair</option>
+          <option value="desktop-repair">Desktop Repair</option>
+          <option value="remote-support">Remote Support</option>
+          <option value="on-site">On-Site Visit</option>
+          <option value="other">Other / Not Sure</option>
+        </select>
+
+        <label for="message">Tell us more</label>
+        <textarea id="message" name="message" rows="5" placeholder="Describe what's going on with your device..." required></textarea>
+
+        <button type="submit" class="btn btn-primary" id="contact-submit">Send Message</button>
+        <p class="form-status-page" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Village Computers LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="support.html">Support Portal</a>
+      <a href="http://blog.cyndrtec.com">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Mobile nav toggle ──
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav   = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
+
+// ── Contact form → Cloudflare Worker ──
+const WORKER_URL = 'https://contact-form.villagecomputersmtp.workers.dev';
+
+const form      = document.getElementById('contact-form');
+const statusEl  = document.getElementById('form-status');
+const submitBtn = document.getElementById('contact-submit');
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name:    form.name.value.trim(),
+      email:   form.email.value.trim(),
+      phone:   form.phone.value.trim(),
+      service: form.service.value,
+      message: form.message.value.trim(),
+    };
+
+    statusEl.textContent = '';
+    statusEl.className   = 'form-status-page';
+    submitBtn.disabled   = true;
+    submitBtn.textContent = 'Sending\u2026';
+
+    try {
+      const response = await fetch(WORKER_URL, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error('Request failed');
+
+      statusEl.textContent = '\u2713 Message sent! We\u2019ll be in touch soon.';
+      statusEl.classList.add('success');
+      form.reset();
+    } catch {
+      statusEl.textContent = 'Something went wrong. Please call us at (843) 608-6560 or try again.';
+      statusEl.classList.add('error');
+    } finally {
+      submitBtn.disabled    = false;
+      submitBtn.textContent = 'Send Message';
+    }
+  });
+}
+</script>
+</body>
+</html>

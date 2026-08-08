@@ -12,6 +12,45 @@ if (navToggle && mainNav) {
 }
 
 // ============================================
+// Dropdown nav — click toggle, close on outside click
+// ============================================
+const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+dropdowns.forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.contains('open');
+
+    // Close all other open dropdowns first
+    dropdowns.forEach(d => d.classList.remove('open'));
+
+    // Toggle this one
+    if (!isOpen) {
+      dropdown.classList.add('open');
+    }
+  });
+});
+
+// Close dropdowns when clicking anywhere outside
+document.addEventListener('click', () => {
+  dropdowns.forEach(d => d.classList.remove('open'));
+});
+
+// Prevent clicks inside the menu from closing it
+document.querySelectorAll('.nav-dropdown-menu').forEach(menu => {
+  menu.addEventListener('click', (e) => e.stopPropagation());
+});
+
+// Close dropdowns on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    dropdowns.forEach(d => d.classList.remove('open'));
+  }
+});
+
+// ============================================
 // Contact form -> Cloudflare Worker
 // ============================================
 // Update WORKER_URL to your deployed Worker endpoint, e.g.

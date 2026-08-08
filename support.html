@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Portal | Village Computers — Mount Pleasant, SC</title>
+<meta name="description" content="Get support from Village Computers. Start a remote session via Splashtop, call us, or send a message.">
+<meta property="og:title" content="Support Portal | Village Computers">
+<meta property="og:description" content="Start a remote session, call, or message Village Computers for fast IT support.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0A2D6B 100%);
+    color: #fff; padding: 56px 0 48px; text-align: center;
+  }
+  .page-hero h1 { color: #fff; font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 12px; }
+  .page-hero p { color: #C9DAF8; font-size: 1.05rem; max-width: 520px; margin: 0 auto; }
+
+  .support-options { padding: 72px 0 80px; }
+  .support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+  .support-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 36px 28px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .support-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+  .support-card-icon {
+    width: 60px; height: 60px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    color: #fff; font-size: 1.6rem;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .support-card h2 { font-size: 1.2rem; margin-bottom: 12px; }
+  .support-card p { font-size: 0.93rem; color: var(--color-text-muted); margin-bottom: 24px; flex: 1; }
+  .support-card .btn { width: 100%; }
+
+  .support-note { padding: 48px 0; background: var(--color-surface); text-align: center; }
+  .support-note p { color: var(--color-text-muted); font-size: 0.95rem; max-width: 560px; margin: 0 auto; }
+  .support-note a { color: var(--color-accent); font-weight: 600; }
+
+  @media (max-width: 820px) { .support-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-mark" aria-hidden="true"></span>Village Computers</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Computer Repair <span class="chev">▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="data-recovery.html">Data Recovery</a>
+          <a href="laptop-repair.html">Laptop Repair</a>
+          <a href="desktop-repair.html">Desktop Repair</a>
+          <a href="virus-removal.html">Virus Removal</a>
+          <a href="remote-support.html">Remote Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">On-Site Services <span class="chev">▾</span></button>
+        <div class="nav-dropdown-menu"><a href="residential.html">Residential</a></div>
+      </div>
+      <a href="support.html" class="active">Support Portal</a>
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <a href="tel:8436086560" class="header-cta">(843) 608-6560</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Support Portal</h1>
+    <p>Need help right now? Choose the fastest option for your situation below.</p>
+  </div>
+</section>
+
+<section class="support-options">
+  <div class="container">
+    <div class="support-grid">
+
+      <div class="support-card">
+        <div class="support-card-icon" aria-hidden="true">💻</div>
+        <h2>Remote Session</h2>
+        <p>We connect directly to your computer via Splashtop SOS and fix the issue in real time. Best for software problems, slow performance, virus removal, and general troubleshooting. Call us first so we're ready on our end.</p>
+        <a href="https://sos.splashtop.com/" target="_blank" rel="noopener" class="btn btn-primary">Start Remote Session</a>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon" aria-hidden="true">📞</div>
+        <h2>Call or Text</h2>
+        <p>The fastest way to reach us. We'll talk through the problem and decide together whether it can be handled remotely, needs a drop-off, or requires an on-site visit.</p>
+        <a href="tel:8436086560" class="btn btn-primary">Call (843) 608-6560</a>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon" aria-hidden="true">✉️</div>
+        <h2>Send a Message</h2>
+        <p>Not urgent? Fill out our contact form and we'll get back to you as soon as possible — usually the same day. Great for scheduling drop-offs or on-site visits.</p>
+        <a href="contact-us.html" class="btn btn-outline">Contact Form</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="support-note">
+  <div class="container">
+    <p>If your computer won't turn on, has physical damage, or can't connect to the internet, a remote session won't be possible. <a href="contact-us.html">Contact us</a> to arrange a drop-off at our Mount Pleasant location or an on-site visit.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Village Computers LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="support.html">Support Portal</a>
+      <a href="http://blog.cyndrtec.com">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laptop Repair | Village Computers — Mount Pleasant, SC</title>
+<meta name="description" content="Professional laptop repair in Mount Pleasant, SC. Broken screen, bad battery, power issues, keyboard replacement and more. Free basic diagnostics, no-fix no-charge.">
+<meta property="og:title" content="Laptop Repair | Village Computers">
+<meta property="og:description" content="Expert laptop repair in Mount Pleasant, SC. Most repairs completed in 24–48 hours.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0A2D6B 100%);
+    color: #fff;
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+  .page-hero h1 { color: #fff; font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 12px; }
+  .page-hero p { color: #C9DAF8; font-size: 1.05rem; max-width: 560px; margin: 0 auto 24px; }
+  .page-hero .btn-ghost {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+  .page-hero .btn-ghost:hover { background: rgba(255,255,255,0.16); border-color: #fff; color: #fff; }
+
+  .service-body { padding: 64px 0 80px; }
+  .service-body-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .service-copy h2 { font-size: 1.5rem; color: var(--color-primary); margin-bottom: 16px; }
+  .service-copy p { color: var(--color-text-muted); margin-bottom: 16px; font-size: 0.97rem; }
+  .service-copy ul {
+    list-style: none;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .service-copy ul li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.96rem;
+    color: var(--color-text);
+  }
+  .service-copy ul li::before {
+    content: "✓";
+    color: var(--color-success);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .service-sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+  .sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+  }
+  .sidebar-card h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--color-primary); }
+  .sidebar-card p { font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 12px; }
+  .sidebar-card .btn { width: 100%; text-align: center; display: block; }
+
+  .price-list { display: flex; flex-direction: column; gap: 10px; }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.92rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .price-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .price-row span:last-child { font-family: var(--font-display); font-weight: 600; color: var(--color-primary); }
+
+  .brands-section { padding: 64px 0; background: var(--color-surface); }
+  .brands-section h2 { font-size: 1.5rem; margin-bottom: 12px; text-align: center; }
+  .brands-section > .container > p { text-align: center; color: var(--color-text-muted); margin-bottom: 36px; }
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .brand-pill {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  @media (max-width: 820px) {
+    .service-body-inner { grid-template-columns: 1fr; gap: 40px; }
+    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      Village Computers
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Computer Repair <span class="chev">▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="data-recovery.html">Data Recovery</a>
+          <a href="laptop-repair.html" class="active">Laptop Repair</a>
+          <a href="desktop-repair.html">Desktop Repair</a>
+          <a href="virus-removal.html">Virus Removal</a>
+          <a href="remote-support.html">Remote Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">On-Site Services <span class="chev">▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="residential.html">Residential</a>
+        </div>
+      </div>
+      <a href="support.html">Support Portal</a>
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <a href="tel:8436086560" class="header-cta">(843) 608-6560</a>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Laptop Repair</h1>
+    <p>Cracked screen, dead battery, won't turn on? We actually open laptops and fix them — most repairs done in 24–48 hours.</p>
+    <a href="contact-us.html" class="btn btn-ghost">Request Service</a>
+  </div>
+</section>
+
+<!-- ============ BODY ============ -->
+<section class="service-body">
+  <div class="container service-body-inner">
+
+    <div class="service-copy">
+      <h2>Real repairs, not just replacements</h2>
+      <p>A lot of shops will tell you a laptop isn't worth fixing and push you toward buying a new one. We take a different approach — we diagnose the actual problem, tell you exactly what it'll cost to fix, and let you decide. No pressure, no upsell.</p>
+      <p>We're comfortable doing hardware-level repairs that many shops shy away from, including LCD replacements, power jack repairs, and motherboard-level diagnostics. If it can be fixed, we'll fix it.</p>
+
+      <ul>
+        <li>Broken or cracked LCD / screen replacement</li>
+        <li>Power jack repair (laptop won't charge)</li>
+        <li>Battery replacement</li>
+        <li>Keyboard replacement</li>
+        <li>Overheating — fan cleaning and thermal paste replacement</li>
+        <li>Slow laptop tune-up and optimization</li>
+        <li>Operating system reinstall / Windows repair</li>
+        <li>RAM and SSD upgrades</li>
+        <li>Hinge repair</li>
+        <li>Water damage assessment</li>
+      </ul>
+
+      <h2>Free basic diagnostics — no-fix, no-charge</h2>
+      <p>We don't charge for basic diagnostics. If we can't fix your laptop or the repair isn't worth the cost, you won't pay a dime. We'll always give you an honest assessment so you can make the right call.</p>
+    </div>
+
+    <div class="service-sidebar">
+      <div class="sidebar-card">
+        <h3>Ready to bring it in?</h3>
+        <p>No appointment needed. Drop off your laptop and we'll take a look — free of charge.</p>
+        <a href="tel:8436086560" class="btn btn-primary" style="margin-bottom:10px;">Call (843) 608-6560</a>
+        <a href="contact-us.html" class="btn btn-outline">Send a Message</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Typical Pricing</h3>
+        <p>Exact quotes are given after diagnosis — every laptop is different.</p>
+        <div class="price-list">
+          <div class="price-row"><span>Diagnostic</span><span>Free</span></div>
+          <div class="price-row"><span>Screen Replacement</span><span>From $85</span></div>
+          <div class="price-row"><span>Power Jack Repair</span><span>From $85</span></div>
+          <div class="price-row"><span>Battery Replacement</span><span>From $85</span></div>
+          <div class="price-row"><span>Keyboard Replacement</span><span>From $85</span></div>
+          <div class="price-row"><span>Tune-Up / Optimization</span><span>From $85</span></div>
+          <div class="price-row"><span>RAM / SSD Upgrade</span><span>From $50 + parts</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Turnaround time</h3>
+        <p>Most laptop repairs are completed within 24–48 hours. Parts availability may affect timing — we'll let you know up front.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ BRANDS ============ -->
+<section class="brands-section">
+  <div class="container">
+    <h2>Brands we service</h2>
+    <p>We work on all major laptop brands, including but not limited to:</p>
+    <div class="brands-grid">
+      <div class="brand-pill">Dell</div>
+      <div class="brand-pill">HP</div>
+      <div class="brand-pill">Lenovo</div>
+      <div class="brand-pill">ASUS</div>
+      <div class="brand-pill">Acer</div>
+      <div class="brand-pill">MSI</div>
+      <div class="brand-pill">Toshiba</div>
+      <div class="brand-pill">Samsung</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Village Computers LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="support.html">Support Portal</a>
+      <a href="http://blog.cyndrtec.com">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
